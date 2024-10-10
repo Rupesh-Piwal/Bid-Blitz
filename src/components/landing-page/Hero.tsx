@@ -3,6 +3,8 @@ import Image from "next/image";
 import { Button } from "../ui/button";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import ShinyButton from "../ui/shiny-button";
+import BlurIn from "../ui/blur-in";
 
 const Hero = () => {
   const fadeIn = {
@@ -28,27 +30,31 @@ const Hero = () => {
           variants={staggerChildren}
         >
           <motion.h1
-            className="text-5xl font-bold leading-tight mb-6 text-gray-900"
+            className="text-[40px] font-bold leading-tight mb-6 text-gray-900"
             variants={fadeIn}
           >
-            Bid, Win, and Thrill with{" "}
-            <span className="text-sky-600">BidBlitz</span>
+            <BlurIn
+              word="Bid, Win, and Thrill with"
+              className="font-bold text-black"
+            />
+            <BlurIn word="BidBlitz" className="font-bold text-[#79A0F2]" />
           </motion.h1>
           <motion.p
-            className="text-xl text-gray-600 mb-8 max-w-2xl"
+            className="text-[17px] text-slate-500 mb-8 max-w-2xl"
             variants={fadeIn}
           >
             Experience the excitement of live auctions from the comfort of your
-            home. BidBlitz brings the auction house to your fingertips.
+            home. <span className="text-[#79A0F2]">BidBlitz</span> brings the
+            auction house to your fingertips.
           </motion.p>
           <motion.div
             className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4"
             variants={fadeIn}
           >
             <Link href="/auctions">
-              <Button className="bg-sky-600 hover:bg-sky-700 text-white">
+              <ShinyButton className="bg-[#5e91ff] hover:bg-[#79A0F2]/85 text-white">
                 Start Bidding Now
-              </Button>
+              </ShinyButton>
             </Link>
           </motion.div>
         </motion.div>

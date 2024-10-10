@@ -34,7 +34,7 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={cn(
-          "min-h-screen bg-background font-sans antialiased ",
+          "min-h-screen bg-gradient-to-b from-[#E0E6F8] via-[#F9F0E7] to-[#FBF7F4] font-sans antialiased",
           fontSans.variable
         )}
       >

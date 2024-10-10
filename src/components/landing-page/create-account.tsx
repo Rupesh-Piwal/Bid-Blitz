@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 const CreateAccount = () => {
   return (
-    <section className="py-20 bg-sky-50">
+    <section className="py-20 bg-[#D0EAF7]">
       <div className="container mx-auto px-4 text-center">
         <motion.h2
           className="text-4xl font-bold mb-8 text-gray-900"
@@ -31,7 +31,7 @@ const CreateAccount = () => {
           transition={{ duration: 0.6, delay: 0.2 }}
           viewport={{ once: true }}
         >
-          <Button size="lg" className="bg-sky-600 hover:bg-sky-700 text-white">
+          <Button size="lg" className="bg-[#79A0F2] hover:bg-[#79A0F2]/85 text-white">
             Create Your Free Account
           </Button>
         </motion.div>

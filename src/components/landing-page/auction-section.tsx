@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { Clock } from "lucide-react";
 import Image from "next/image";
 import { Button } from "../ui/button";
+import WordPullUp from "../ui/word-pull-up";
 
 const AuctionSection = () => {
   const fadeIn = {
@@ -19,7 +20,10 @@ const AuctionSection = () => {
     },
   };
   return (
-    <section id="live-auctions" className="py-20 bg-sky-50">
+    <section
+      id="live-auctions"
+      className="py-20 bg-gradient-to-r from-[#E0E6F8] to-[#FBF7F4]"
+    >
       <div className="container mx-auto px-4">
         <motion.h2
           className="text-4xl font-bold text-center mb-12 text-gray-900"
@@ -28,7 +32,10 @@ const AuctionSection = () => {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          Live Auctions Happening Now
+<WordPullUp
+      className="text-4xl font-bold tracking-[-0.02em] text-black"
+      words="Live Auctions Happening Now!"
+    />
         </motion.h2>
         <motion.div
           className="grid grid-cols-1 md:grid-cols-3 gap-8"
@@ -77,7 +84,7 @@ const AuctionSection = () => {
                   <Clock className="w-4 h-4 mr-1" /> {auction.timeLeft}
                 </span>
               </div>
-              <Button className="w-full mt-4 bg-sky-600 hover:bg-sky-700 text-white">
+              <Button className="w-full mt-4 bg-[#79A0F2] hover:bg-[#79A0F2]/85 text-white">
                 Place Bid
               </Button>
             </motion.div>
